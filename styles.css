@@ -1,0 +1,105 @@
+/* ============================================================
+   QR Studio — styles.css
+   ============================================================ */
+
+/* Prevent FOUC for dark mode */
+html.dark { color-scheme: dark; }
+
+/* Color picker */
+.color-input {
+  -webkit-appearance: none;
+  width: 36px;
+  height: 36px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 2px;
+  cursor: pointer;
+  background: none;
+  flex-shrink: 0;
+}
+.dark .color-input { border-color: #4b5563; }
+.color-input::-webkit-color-swatch-wrapper { padding: 0; }
+.color-input::-webkit-color-swatch { border: none; border-radius: 5px; }
+
+/* Range inputs */
+.range-input {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 2px;
+  background: #e5e7eb;
+  outline: none;
+  cursor: pointer;
+}
+.dark .range-input { background: #374151; }
+.range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #6366f1;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+}
+.dark .range-input::-webkit-slider-thumb { border-color: #1f2937; }
+.range-input::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #6366f1;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+}
+
+/* History thumbnails — make SVG fill container */
+.history-thumb svg,
+.history-thumb canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  border-radius: 6px;
+}
+
+/* QR canvas container */
+#qrCanvas svg,
+#qrCanvas canvas {
+  border-radius: 12px;
+  display: block;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { height: 5px; width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
+.dark ::-webkit-scrollbar-thumb { background: #4b5563; }
+
+/* Toast animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translate(-50%, 12px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+.toast { animation: fadeUp 0.2s ease forwards; }
+
+/* Smooth tab transitions */
+.type-btn, .ec-btn, .dot-btn, .eye-btn {
+  transition: border-color 0.15s, background-color 0.15s, color 0.15s;
+}
+
+/* Password field show/hide icon */
+.pw-wrap { position: relative; }
+.pw-wrap input { padding-right: 2.5rem; }
+.pw-toggle {
+  position: absolute;
+  right: 0.625rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #9ca3af;
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+}
+.pw-toggle:hover { color: #6366f1; }
