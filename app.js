@@ -712,13 +712,7 @@ function renderAll() {
 
 // ---- Init --------------------------------------------------------
 function init() {
-  // Apply dark mode immediately before render
-  const saved = localStorage.getItem('qrstudio_dark');
-  state.darkMode = saved !== null
-    ? saved === 'true'
-    : window.matchMedia('(prefers-color-scheme: dark)').matches;
-  applyDarkMode();
-
+  initDarkMode();
   loadHistory();
   renderAll();
   initColorControls();

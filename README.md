@@ -2,7 +2,7 @@
 
 Free, browser-based QR code generator. No login, no watermarks, no uploads — everything runs locally in your browser.
 
-**[Live Demo →](https://your-username.github.io/qrgenerator)**
+**[Live Demo →](https://badiattila.github.io/qrstudio)**
 
 ---
 
@@ -60,8 +60,8 @@ Free, browser-based QR code generator. No login, no watermarks, no uploads — e
 ## Getting Started
 
 ```bash
-git clone https://github.com/your-username/qrgenerator.git
-cd qrgenerator
+git clone https://github.com/badiattila/qrstudio.git
+cd qrstudio
 open index.html        # macOS
 # or
 xdg-open index.html    # Linux
@@ -78,19 +78,19 @@ No dependencies to install. No build step.
 git init
 git add .
 git commit -m "Initial commit"
-gh repo create qrgenerator --public --push --source=.
+gh repo create qrstudio --public --push --source=.
 ```
 
 Then in the GitHub repo: **Settings → Pages → Branch: main → / (root) → Save**
 
-Your site will be live at `https://your-username.github.io/qrgenerator`.
+Your site will be live at `https://badiattila.github.io/qrstudio`.
 
 ---
 
 ## Project Structure
 
 ```
-qrgenerator/
+qrstudio/
 ├── index.html   # Page structure and layout
 ├── app.js       # All state, QR generation, form rendering, history, dark mode
 └── styles.css   # Color picker, range slider, scrollbar, toast animation
